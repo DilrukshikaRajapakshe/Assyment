@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="osgiProject" value="true"/>
+	<item key="generatePluginActivator" value="true"/>
+	<item key="apiAnalysis" value="false"/>
+	<item key="rcpPlugin" value="false"/>
+	<list key="providers">
+		<item value="SLIIT"/>
+	</list>
+	<section name="PluginImportWizard">
+		<item key="droplocation0" value="/Users/dilrukshi/Desktop/Sliit/MTIT/ocgi/OSGI_ECLIPSE_EQUINOX-master"/>
+		<item key="importFrom" value="3"/>
+		<item key="importType" value="1"/>
+		<item key="scanAll" value="true"/>
+		<item key="showLatestPluginsOnly" value="true"/>
+		<item key="addFragments" value="true"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="PDEFormActionManager">
+	</section>
+</section>
