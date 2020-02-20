@@ -8,6 +8,7 @@ public class dbServiceImpl implements DBService {
 	
 	private static final List<payment> paymentList = new ArrayList<>();
 	
+	
 	public dbServiceImpl() {
 		//payment data
 		paymentList.add(new payment("P001", "S001", 10.12, 2, 20.24));
@@ -19,24 +20,27 @@ public class dbServiceImpl implements DBService {
 
 	//insert
 	@Override
-	public void addPayament(payment p) {
+	public String addPayament(payment p) {
+		int size = paymentList.size();
 		paymentList.add(p);
+		if(paymentList.size() == size)
+			return "Payment Data Insert not successful";
+		return "Payment Data Insert successful";
 	}
 
 	//delete
 	@Override
-	public List<payment> deletePayament(String id) {
-		return paymentList.stream().map(p -> {
-			if(p.getId().equals(id))
-				paymentList.remove(p);
-            return p;
-        }).collect(Collectors.toList());
+	public String deletePayament(String id) {
+		if (paymentList.removeIf(payment -> payment.getId().equals(id))) {
+			return "Deleted Successfully";
+		} else {
+			return "Delete Not Successfully. Payment ID : " + id;
+		}
 	}
 
 	//All
 	@Override
 	public List<payment> findAllPayament() {
-		
 		return paymentList;
 	}
 
@@ -48,15 +52,20 @@ public class dbServiceImpl implements DBService {
 
 	//update
 	@Override
-	public List<payment> updatePayment(payment p) {
-		return paymentList.stream().map(pay -> {
-			if(pay.getId().equals(p.getId()))
+	public String updatePayment(payment p) {
+		String result = null;
+		for(int a=0; a < paymentList.size(); a++ ) {
+			payment pay = paymentList.get(a);
+			if(pay.getId().equals(p.getId())) {
 				pay.setPrice(p.getPrice());
 				pay.setStockeID(p.getStockeID());
 				pay.setTot(p.getTot());
 				pay.setAmount(p.getAmount());
-            return p;
-        }).collect(Collectors.toList());
+				result = "Update successful";
+			}
+			result = "Update Not successful. Payment ID : " + p.getId();
+        }
+		return result;
 	}
 
 }

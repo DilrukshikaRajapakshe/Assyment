@@ -4,9 +4,9 @@ import java.util.List;
 
 public interface DBService {
 
-	public void addPayament(payment p);
-	public List<payment> deletePayament(String id);
+	public String addPayament(payment p);
+	public String deletePayament(String id);
 	public List<payment> findAllPayament();
 	public payment findPayament(String id);
-	public List<payment> updatePayment(payment p);
+	public String updatePayment(payment p);
 }

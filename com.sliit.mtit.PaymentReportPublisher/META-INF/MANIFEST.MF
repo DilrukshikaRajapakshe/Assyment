@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PaymentReportPublisher
+Bundle-SymbolicName: com.sliit.mtit.PaymentReportPublisher
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.sliit.mtit.paymentreportpublisher.Activator
+Bundle-Vendor: SLIIT
+Export-Package: com.sliit.mtit.paymentreportpublisher
+Bundle-RequiredExecutionEnvironment: JavaSE-13
+Automatic-Module-Name: com.sliit.mtit.PaymentReportPublisher
+Import-Package: com.sliit.mtit.paymentDatabase,org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
