@@ -7,10 +7,10 @@
     <fullyQualifiedTypeName name="com.sliit.mtit.paymentDatabase.dbServiceImpl"/>
     <fullyQualifiedTypeName name="com.sliit.mtit.paymentDatabase.DBService"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.osgi.framework.ServiceReference"/>
     <fullyQualifiedTypeName name="com.sliit.mtit.paymentreportpublisher.paymentreportpublisherService"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="com.sliit.mtit.paymentDatabase.payment"/>
     <fullyQualifiedTypeName name="com.sliit.mtit.paymentpublisher.paymentpublisherService"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

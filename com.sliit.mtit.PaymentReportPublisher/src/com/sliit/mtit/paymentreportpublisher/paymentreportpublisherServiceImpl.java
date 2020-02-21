@@ -26,17 +26,8 @@ public class paymentreportpublisherServiceImpl implements paymentreportpublisher
 	}
 
 	@Override
-	public void findAll() {
-		ArrayList<payment> list = (ArrayList<payment>) service.findAllPayament();
-		list.stream().forEach(p ->{
-			System.out.println("----------------------------------");
-			System.out.println("Payment ID :" + p.getId());
-			System.out.println("Stock ID :" + p.getStockeID());
-			System.out.println("Price :" + p.getPrice() + "/RS");
-			System.out.println("Amount :" + p.getAmount());
-			System.out.println("Total :" + p.getTot());
-			System.out.println("----------------------------------");
-		});
+	public List<payment> findAll() {
+		return service.findAllPayament();
 	}
 	
 
