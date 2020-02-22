@@ -74,6 +74,7 @@ public class dbServiceImpl implements DBService {
 		String result = null;
 		for(int a=0; a < paymentList.size(); a++ ) {
 			payment pay = paymentList.get(a);
+			System.out.println(pay);
 			if(pay.getId().equals(p.getId())) {
 				pay.setPrice(p.getPrice());
 				pay.setStockeID(p.getStockeID());
@@ -81,7 +82,6 @@ public class dbServiceImpl implements DBService {
 				pay.setAmount(p.getAmount());
 				result = "Update successful";
 			}
-			result = "Update Not successful. Payment ID : " + p.getId();
         }
 		return result;
 	}
